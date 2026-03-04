@@ -11,6 +11,8 @@ import { JsonParser } from "@/lib/parsers/json-parser";
 import type { FileParser } from "@/lib/parsers/types";
 import type { LanguageCode } from "@/lib/constants";
 
+export const maxDuration = 60;
+
 function getParser(ext: string): FileParser {
   switch (ext) {
     case ".docx": return new DocxParser();
@@ -93,8 +95,3 @@ export async function POST(request: NextRequest) {
   }
 }
 
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};

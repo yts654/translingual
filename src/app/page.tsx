@@ -49,8 +49,14 @@ export default function Home() {
       });
 
       if (!response.ok) {
-        const errorData = await response.json();
-        throw new Error(errorData.error || "翻訳に失敗しました");
+        let errorMessage = "翻訳に失敗しました";
+        try {
+          const errorData = await response.json();
+          errorMessage = errorData.error || errorMessage;
+        } catch {
+          errorMessage = `サーバーエラー (${response.status})`;
+        }
+        throw new Error(errorMessage);
       }
 
       const segCount = response.headers.get("X-Segment-Count");
