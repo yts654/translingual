@@ -1,0 +1,32 @@
+{
+  "name": "translingual",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
+    "@types/node": "^25.3.3",
+    "@types/papaparse": "^5.5.2",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^10.0.2",
+    "eslint-config-next": "^15.5.12",
+    "fast-xml-parser": "^5.4.2",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.576.0",
+    "next": "^15.5.12",
+    "openai": "^6.25.0",
+    "papaparse": "^5.5.3",
+    "postcss": "^8.5.8",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "react-dropzone": "^15.0.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  }
+}
